@@ -21,7 +21,7 @@ export default class App extends Component {
     const parsedContacts = JSON.parse(contacts);
 
     if (parsedContacts) {
-      this.setStated({ contacts: parsedContacts });
+      this.setState({ contacts: parsedContacts });
     }
   }
 
@@ -43,7 +43,7 @@ export default class App extends Component {
       contacts.find(
         contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
       )
-        ? alert(`${name} is already is contacts.`)
+        ? alert(`${name} is already in contacts.`)
         : { contacts: [newContact, ...contacts] }
     );
   };
